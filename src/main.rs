@@ -65,12 +65,15 @@ fn main() {
         CeldaHojaCalculo::Float(9.81),
     ];
 
-    // for i22 in &fila {
-    //     println!("{}", i22);
-    // }
+    // This didn't work... I needed to add #[derive(Debug)] to the enum...
+    // and also to use "{:?}" isntead of just "{}"
+    for i2 in &fila {
+        println!("{:?}", i2);
+    }
 
 }
 
+#[derive(Debug)]
 enum CeldaHojaCalculo {
     Int(i32),
     Float(f64),
